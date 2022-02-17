@@ -22,7 +22,7 @@ pipeline {
             }
         stage('Deployment of Docker Container'){
             steps{
-           sh 'docker run -p Rj14@2941 8080:8080 -d -name demo_project 8875022556/demo_project:latest'
+           sh 'docker run -p  8000:80 -d -name demo_project 8875022556/demo_project:latest'
             }
         }
       }
