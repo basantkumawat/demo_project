@@ -22,8 +22,12 @@ pipeline {
             }
         stage('Deployment of Docker Container'){
             steps{
-            sh 'scp /var/lib/jenkins/workspace/demo_pipeline/ root@172.31.44.141:/var/lib/'
+                sshagent(['dockerhostpwd']) {
+    // some block
+                    sh 'scp /var/lib/jenkins/workspace/demo_pipeline/ root@172.31.44.141:/var/lib/'
 
+}
+            
             }
         }
         }
