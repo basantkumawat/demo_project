@@ -24,7 +24,7 @@ pipeline {
             steps{
                 sshagent(['dockerhostpwd']) {
     // some block
-                    sh 'scp /var/lib/jenkins/workspace/demo_pipeline/ root@172.31.44.141:/var/lib/'
+                    sh 'scp /var/lib/jenkins/workspace/demo_project root@172.31.44.141:/var/lib/jenkins/workspace/demo_project'
 
 }
             
