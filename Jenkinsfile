@@ -24,8 +24,7 @@ pipeline {
             steps{
                 sshagent(['dockerhostpwd']) {
                     // some block
-                    sh "ssh -o StrictHostKeyChecking=no root@172.31.44.141 ${dockerhostpwd}"
-                    sh "whoami"
+                    sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.44.141 ${dockerhostpwd}
                 }
             }
         }
