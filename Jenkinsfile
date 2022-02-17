@@ -24,7 +24,7 @@ pipeline {
             steps{
                 sshagent(['dockerhostpwd']) {
                     // some block
-                    sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.44.141 ${dockerhostpwd}
+                    sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.44.141 ${dockerhostpwd}"
                 }
             }
         }
