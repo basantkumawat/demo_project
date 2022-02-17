@@ -20,5 +20,10 @@ pipeline {
                   }
                 }
             }
+        stage('Deployment of Docker Container'){
+            steps{
+            echo'Hellow'
+            }
+        }
         }
     }
