@@ -21,14 +21,11 @@ pipeline {
                 }
             }
         stage('Deployment of Docker Container'){
-            steps{
-                
-                sshagent(['new']) {
-    // some block
-                    sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.44.141 ${new}"
-              }
-               
+            steps
+            sshagent(['new']) {
+                    sh "ssh -o StrictHostKeyChecking=no root@172.31.44.141 ${new}"
+              }  
             }
         }
-        }
+      }
     }
