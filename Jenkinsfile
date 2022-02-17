@@ -22,7 +22,8 @@ pipeline {
             }
         stage('Deployment of Docker Container'){
             steps{
-            echo'Hellow'
+            sh 'scp /var/lib/jenkins/workspace/demo_pipeline/ root@172.31.44.141:/var/lib/'
+
             }
         }
         }
