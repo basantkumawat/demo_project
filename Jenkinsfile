@@ -22,12 +22,7 @@ pipeline {
             }
         stage('Deployment of Docker Container'){
             steps{
-            def dockerrun = 'docker run -p 8080:8080 -d -name demo_project 8875022556/demo_project:latest'
-            sshagent(['dockerhostpwd']) {
-                
-    // some block
-                sh "ssh -o StrictHostKeyChecking=no  ubuntu@172.31.87.50 ${dockerrun}"
-              }
+           sh 'docker run -p Rj14@2941 8080:8080 -d -name demo_project 8875022556/demo_project:latest'
             }
         }
       }
